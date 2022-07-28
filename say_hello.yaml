@@ -6,4 +6,4 @@
   tasks:
    - name: display some facts
      debug:
-      msg: "deploying version {{ver}} of the software on {{group}}"
+      msg: "deploying version {{ver}} of the software on {{groups}}"
