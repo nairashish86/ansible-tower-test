@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+   - name: install tree
+     yum:
+      name: tree
+      state: latest
+   - name: say hello
+     debug:
+      msg: "just here to say hello"
