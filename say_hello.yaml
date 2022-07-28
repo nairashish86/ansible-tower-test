@@ -1,7 +1,9 @@
 ---
 - hosts: all
-  gather_facts: no
+  gather_facts: yes
+  vars:
+   ver: 2
   tasks:
    - name: display some facts
      debug:
-      msg: "{{ansible_all_ipv4_addresses}}"
+      msg: "deploying version {{ver}} of the software"
