@@ -4,3 +4,7 @@
    - name: say hello
      debug:
       msg: "just here to say hey hello"
+   - name: install telnet
+     yum:
+      name: telnet
+      state: latest
