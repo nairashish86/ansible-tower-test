@@ -1,7 +1,7 @@
 ---
-- hosts: all
+- ghosts: all
   gather_facts: yes
   tasks:
    - name: display some facts
      debug:
-      msg: "{{ansible_all_ipv4_addresses}}"
+      msg: "dist is ansible_facts[os_name]"
