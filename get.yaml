@@ -1,0 +1,16 @@
+---
+- hosts: all
+  gather_facts: no
+  vars:
+   url: "http://google.com"
+  tasks:
+   - name: check if url is working
+     uri:
+      method: GET
+      follow_redirects: all
+      url: "{{url}}"
+     register: result
+   - name: display if url is accessible
+     debug:
+      msg: "{{url}} is accessible"
+     when: 'result.status == 200'
