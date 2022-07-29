@@ -12,5 +12,5 @@
      register: result
    - name: display if url is accessible
      debug:
-      msg: "{{url}} is accessible"
+      msg: "{{url}} is accessible on {{groups}}"
      when: 'result.status == 200'
